@@ -1,0 +1,280 @@
+<!Doctype html>
+<head>
+	<title>Classic Writers </title>
+	<script language="JavaScript">
+		function add()
+		{
+			var a,b,c,d,n,q;
+			
+			n=document.getElementById("qno").value;
+			q = document.getElementById("qn").value;
+			
+			a=document.getElementById("a").value;
+			b=document.getElementById("b").value;
+			c=document.getElementById("c").value;
+			d=document.getElementById("d").value;
+			
+			var check,res;
+			check = document.getElementById("correct").value;
+			
+			switch(check)
+			{
+			case 'a' :  res="\n<fieldset><legend>\n"+n+".  "+q+"\n</legend>\n<div class='answers'>\n<div class='answer'>\n<input type='radio' name='answers[" +n+"]' id='answer-"+n+"-1' value='1' required><label for='answer-"+n+"-1' class='answer__item answer__item--is-correct'>"+a+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-2' value='2' required><label for='answer-"+n+"-2' class='answer__item '>"+b+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-3' value='3' required><label for='answer-"+n+"-3' class='answer__item '>"+c+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-4' value='4' required><label for='answer-"+n+"-4' class='answer__item '>"+d+"</label></div>\n</div></fieldset>" ;break;
+			case 'b' :  res="\n<fieldset><legend>\n"+n+".  "+q+"</legend><div class='answers'><div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-1' value='1' required><label for='answer-"+n+"-1' class='answer__item '>"+a+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-2' value='2' required><label for='answer-"+n+"-2' class='answer__item answer__item--is-correct '>"+b+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-3' value='3' required><label for='answer-"+n+"-3' class='answer__item '>"+c+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-4' value='4' required><label for='answer-"+n+"-4' class='answer__item '>"+d+"</label></div></div></fieldset>";break;
+			case 'c' :  res="\n<fieldset><legend>\n"+n+".  "+q+"</legend><div class='answers'><div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-1' value='1' required><label for='answer-"+n+"-1' class='answer__item '>"+a+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-2' value='2' required><label for='answer-"+n+"-2' class='answer__item '>"+b+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-3' value='1' required><label for='answer-"+n+"-3' class='answer__item answer__item--is-correct '>"+c+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-4' value='4' required><label for='answer-"+n+"-4' class='answer__item '>"+d+"</label></div></div></fieldset>";break;
+			case 'd' :  res="\n<fieldset><legend>\n"+n+".  "+q+"</legend><div class='answers'><div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-1' value='1' required><label for='answer-"+n+"-1' class='answer__item '>"+a+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-2' value='2' required><label for='answer-"+n+"-2' class='answer__item '>"+b+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-3' value='3' required><label for='answer-"+n+"-3' class='answer__item '>"+c+"</label></div>\n<div class='answer'><input type='radio' name='answers[" +n+"]' id='answer-"+n+"-4' value='4' required><label for='answer-"+n+"-4' class='answer__item answer__item--is-correct '>"+d+"</label></div></div></fieldset>";break;
+
+			}
+			var result;
+			
+			result=document.getElementById("txt").value;
+			document.getElementById("txt").value = result+res;
+			
+		}
+		
+		function sub()
+		{
+			var allquiz,allsubmit,all;
+			allquiz = document.getElementById("txt").value;
+			
+			allsubmit = "\n<div class='message'><p>Your Score: <span class='score' data-question-count='20'></span></p></div>";
+			 
+			 all = allquiz+ allsubmit;
+			 
+			 document.getElementById("here").innerHTML = all;  
+			 
+			 
+			 var copy;
+			  copy = document.getElementById("fullpage").innerHTML;
+			  document.getElementById("txt").value = copy;
+			 
+		}
+		function addcf()
+		{
+			var cf1,cf2,cf3,cf;
+			
+			cf1=document.getElementById("cf1").value;
+			cf2=document.getElementById("cf2").value;
+			cf3=document.getElementById("cf3").value;
+			
+			cf="<ul><li>"+cf1+"</li>\n<li>"+cf2+"</li>\n<li>"+cf3+"</li></ul> ";
+			document.getElementById("lead").innerHTML=cf;
+			
+			}
+		
+	
+	</script>
+	
+	
+	<style>
+	body
+	{
+	background-color:#eee;
+	}
+	
+	input[type=text]  
+	{
+		width: 80%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+    }
+	
+	select
+	{
+		width:50px;
+		height:30px;
+	}
+	input[type=submit],button
+	{
+		width:150px;
+		height:50px;
+		background-color:#ce1b28;
+	}
+	
+			
+	</style>
+		
+		
+	</head>
+	
+	
+	<body>
+	<form name="form">
+		<label>Question No :  </label>
+		<input type="text"  id="qno" >
+	
+		<br>
+		
+	</form>	
+		
+		
+		<label> Question </label>
+			<input type="text"   id="qn">
+			<br>
+		<ul>
+		<li>		
+		<label> Option A </label>
+			<input type="text" id="a">
+		</li>
+		
+		<li>	
+		<label> Option B</label>
+			<input type="text"  id="b">
+		</li>
+		
+		<li><label> Option C </label>
+			<input type="text"  id="c">
+		</li>
+		
+		<li>
+		<label> Option D</label>
+			<input type="text"  id="d" >	
+		</li>
+		</ul>
+		<br>
+		<label>Correct Answer </label>
+		<select  id="correct">
+		<option value="a">A
+		<option value="b">B
+		<option  value="c">C
+		<option value="d">D
+		</select>
+		<br>
+		
+		<br>
+		
+		
+		
+		<textarea   id="txt"  cols="100" rows="20" >
+		</textarea>	
+		
+		
+		<br>
+		
+		<input type="submit" value="ADD"  onclick="add()">
+		
+		
+		<br>
+		<label>CF 1</label>
+			<input type="text" id="cf1">
+		<br>
+		<label>CF 2</label>
+			<input type="text" id="cf2">
+		<br>
+		<label>CF 3</label>
+			<input type="text" id="cf3">
+		<br>
+		
+		<input type="submit" value="Add" onclick="addcf()">
+		<br><br>
+		
+		
+		
+		
+		<input type="submit" value="Complete" onclick="sub()">
+		<br>
+		
+		
+	</form>
+	
+	
+	
+	<div id="fullpage"  style="display:none" >
+		
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+			<div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-jA3MFGd1CAQ/X2IIJURQ3YI/AAAAAAAAAlY/SoEuNDgYZFgvnXRobDGjZWW9D2wOO3iAwCPcBGAYYCw/s630/1600260128958575-0.png" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" width="400" data-original-height="630" data-original-width="630" src="https://1.bp.blogspot.com/-jA3MFGd1CAQ/X2IIJURQ3YI/AAAAAAAAAlY/SoEuNDgYZFgvnXRobDGjZWW9D2wOO3iAwCPcBGAYYCw/s400/1600260128958575-0.png"/></a></div>
+			<form method="POST" class="is-not-results">
+				<div id="here"></div>
+		
+   
+	
+
+	
+			</form>
+			
+<div class="jumbotron jumbotron-fluid">
+  <div class="container"  >
+    <h1 class="display-4">Current Affairs</h1>
+    
+    
+    <p id="lead"  style="font-size:13px;!important">
+      
+    hello
+      
+      
+    
+      </p>
+			
+			<style>
+  fieldset {
+	border: 0;
+	margin: 2rem 0;
+}
+
+fieldset legend {
+	font-weight: 700;
+}
+
+.answer__item {
+    background-color: #f6f6f6;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 0.75rem 1.25rem;
+	 margin: 0.25rem 0;
+}
+
+/* Hide Radio Buttons and Submit Button */
+input[type="radio"], button {
+  display: none;
+}
+
+/* Any correct answer on any answered question, highlight in light green */
+:valid .answer__item--is-correct { background-color: rgba(61, 181, 64, 0.6) }
+
+/* Show any extra explanatory text */
+.answer__reveal-text { display: none; }
+:valid .answer__reveal-text { display: block }
+
+/* Any chosen answer, highlight in red */
+:checked + .answer__item { color: #ffffff; background-color: #c70000 }
+
+/* Any correctly chosen answer, highlight in bright green */
+:checked + .answer__item--is-correct { background-color: #3db540; }
+
+/* Show the icon for the selected answer */
+:checked + .answer__item .answer__icon { display: inline-block }
+
+
+/* prevent chosing another answer once chosen */
+:valid { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none }
+:valid + .answer__item { pointer-events: none }
+
+/* keep track of score */
+form { counter-reset: quiz-score }
+:checked + .answer__item--is-correct { counter-increment: quiz-score }
+.score:after { content: counter(quiz-score) "/" attr(data-question-count) }
+
+/* show score once quiz has been completed */
+.message { display: none;font-size:20px; 
+  }
+form:valid .message { display: block }
+  
+  
+ legend
+  {
+    font-size:15px;!important;
+  }
+
+
+  
+</style>
+	</div>
+	
+	
+	
+	
+</body>
+</html>	
+			
