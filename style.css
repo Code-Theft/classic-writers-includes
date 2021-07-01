@@ -57,6 +57,7 @@ span {
   border-radius: 16px;
   width: 100%;
   display: grid;
+  height:100vh;
 }
 
 .dashboard ul {
